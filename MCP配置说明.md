@@ -1,48 +1,29 @@
-# MCP 搜索工具配置
+# MCP 搜索工具配置（5个）
 
-## 三个搜索MCP
+## 国内直接可用（无需外网）
+| MCP | API Key | 搜索引擎 |
+|-----|---------|---------|
+| **bing-search** | 无需 | 必应中文 |
+| **baidu-search** | 无需 | 百度（爬虫） |
 
-| MCP | 能否在国内用 | API Key | 用途 |
-|-----|------------|---------|------|
-| **bing-search** | ✅ 直接用 | 无需 | 必应中文搜索，GitHub/CSDN/贴吧都能搜 |
-| serper-search | ⚠️ 需外网 | `0538ec60fad4b78e87ce48e15ab9f93491ebe9de` | Google搜索+网页抓取 |
-| tavily-search | ⚠️ 需外网 | `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` | AI优化搜索 |
+## 需外网/代理
+| MCP | API Key | 特点 |
+|-----|---------|------|
+| serper-search | `0538ec60...` | Google+网页抓取 |
+| tavily-search | `tvly-dev-bKiHgcxw0...` | AI优化搜索 |
+| **exa** | `e2b96aa7-37de-4081-85f7-357ca7a3ebb2` | 论文/代码/高质量源 |
 
-## 安装方法
-
+## 安装（联想机）
 ```bash
 bash /media/$USER/DADAGAGA/install_mcp.sh
+source ~/.bashrc
+# 重启 claudezgc 后生效
 ```
 
-## 手动配置（如果脚本失败）
-
-在 `~/.claude.json` 的 `mcpServers` 里加：
-
-```json
-{
-  "mcpServers": {
-    "bing-search": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "bing-cn-mcp"]
-    },
-    "serper-search": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "serper-search-scrape-mcp-server"],
-      "env": {"SERPER_API_KEY": "0538ec60fad4b78e87ce48e15ab9f93491ebe9de"}
-    },
-    "tavily-search": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "tavily-mcp"],
-      "env": {"TAVILY_API_KEY": "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"}
-    }
-  }
-}
-```
+## 登录问题
+**不需要登录**。所有key已写入配置文件，重启session自动生效。
 
 ## 注意
-- `bing-search` 在中国网络下搜索 GitHub/CSDN/贴吧没问题
-- Reddit / Twitter 在中国访问不了，需要外网代理
-- MCP 需要重启 claude session 才生效
+- baidu-search启动时会打印env vars到stderr，不影响功能
+- exa适合搜论文、GitHub代码、高质量技术文章
+- Reddit/Twitter需外网代理才能访问（bing/baidu搜不到）

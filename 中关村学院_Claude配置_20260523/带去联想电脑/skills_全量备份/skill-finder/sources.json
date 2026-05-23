@@ -1,0 +1,48 @@
+{
+  "vault_root": "/Users/yangjingchi/.config/agents/skill-vault",
+  "installable_catalogs": [
+    {
+      "id": "openai-curated",
+      "label": "OpenAI curated skills",
+      "repo": "openai/skills",
+      "ref": "main",
+      "prefixes": ["skills/.curated/"]
+    },
+    {
+      "id": "openai-experimental",
+      "label": "OpenAI experimental skills",
+      "repo": "openai/skills",
+      "ref": "main",
+      "prefixes": ["skills/.experimental/"]
+    },
+    {
+      "id": "huggingface-skills",
+      "label": "Hugging Face skills",
+      "repo": "huggingface/skills",
+      "ref": "main",
+      "prefixes": ["skills/", "hf-mcp/skills/"]
+    }
+  ],
+  "discovery_indexes": [
+    {
+      "id": "agent-skill-index",
+      "label": "Agent Skill Index",
+      "url": "https://github.com/heilcheng/awesome-agent-skills"
+    },
+    {
+      "id": "skillsmp",
+      "label": "SkillsMP Marketplace",
+      "url": "https://skillsmp.com"
+    },
+    {
+      "id": "skills-sh",
+      "label": "skills.sh",
+      "url": "https://skills.sh"
+    },
+    {
+      "id": "n-skills",
+      "label": "n-skills marketplace",
+      "url": "https://github.com/numman-ali/n-skills"
+    }
+  ]
+}

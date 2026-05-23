@@ -1,0 +1,28 @@
+{
+  "profiles": [
+    {
+      "command": "claudeaipai",
+      "base_url": "https://api.aipaibox.com/",
+      "api_key": "sk-N8c1EnaseEaN8GVJkDmVybSPlghJ7G5FQZMFcTKZmRoHjVML",
+      "model": "opus[1m]"
+    },
+    {
+      "command": "claudemicu",
+      "base_url": "https://www.micuapi.ai",
+      "api_key": "sk-PaBaIPnh3zasiuPmzW9xohKKfueW6ykRd03sPwFwHXxthXbC",
+      "model": "opus[1m]"
+    },
+    {
+      "command": "claudecodesuc",
+      "base_url": "https://main-new.codesuc.top/",
+      "api_key": "sk-n5LlW8Pm21b1ENgSCMH0Muvx6eeeqBl5Gt7vBs8wxCy0m9lL",
+      "model": "opus[1m]"
+    },
+    {
+      "command": "claudeswarm",
+      "base_url": "https://byteswarm.ai/claude",
+      "api_key": "cr_9vb-z9nLfpKJEwSzbFTTfnADxzP8ee3FBhev4h2vdJY",
+      "model": "opus[1m]"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tmux Coding Agent"
+  short_description: "Drive Claude-family CLIs through tmux"
+  default_prompt: "Use $tmux-coding-agent to launch the exact requested CLI, such as claude, codex, claudeniu, claudecodex, or minimax, inside tmux and control it safely."

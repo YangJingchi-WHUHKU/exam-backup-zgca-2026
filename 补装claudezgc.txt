@@ -1,0 +1,77 @@
+==========================================
+补装 claudezgc 第 5 个 channel
+==========================================
+
+★ 你已经装好 4 个 channel（aipai/micu/codesuc/swarm）
+★ 现在补一个 claudezgc（fastMode 开，响应更快）
+
+==========================================
+方法 A：跑 U 盘脚本（最简单）
+==========================================
+
+在终端 paste：
+
+bash /media/$USER/DADAGAGA/add_claudezgc.sh
+source ~/.bashrc
+claudezgc
+
+==========================================
+方法 B：手动 paste（如果方法 A 不行）
+==========================================
+
+★ 把下面 ★★★ 标记之间整段复制 ★★★
+★ 不要包含 ★★★ 标记本身
+
+★★★ 复制开始 ★★★
+
+mkdir -p ~/.claude_zgc
+
+cat > ~/.claude_zgc/settings.json << 'EOF'
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://www.micuapi.ai",
+    "ANTHROPIC_AUTH_TOKEN": "sk-pRdgVnnj0EaaLhrradXQDClzPDeWMqJXPt78PAcYQWPBwiRU"
+  },
+  "model": "opus[1m]",
+  "permissions": {"defaultMode": "bypassPermissions"},
+  "effortLevel": "high",
+  "fastMode": true,
+  "skipDangerousModePermissionPrompt": true
+}
+EOF
+
+if ! grep -q "claudezgc()" ~/.bashrc; then
+    echo 'claudezgc() { _claude_p "$HOME/.claude_zgc" "zgc" "$@"; }' >> ~/.bashrc
+fi
+
+source ~/.bashrc
+echo "✅ claudezgc 已加好"
+
+★★★ 复制结束 ★★★
+
+paste 完后跑：
+claudezgc
+
+==========================================
+为什么需要 claudezgc
+==========================================
+
+- URL 和 micu 一样（micuapi.ai），但 key 不同
+- 相当于 micu 的备用 key（micu 挂了或额度用完时切换）
+- fastMode: true → 响应速度更快
+- skipDangerousModePermissionPrompt: true → 跳过危险操作确认
+
+==========================================
+现有 5 个 channel
+==========================================
+
+  claudeaipai     主用（aipaibox.com）
+  claudemicu      备用 1（micuapi.ai key 1）
+  claudecodesuc   备用 2（codesuc.top）
+  claudeswarm     备用 3（byteswarm.ai）
+  claudezgc       备用 4（micuapi.ai key 2, fastMode）
+
+任一进入后用 /resume 可以接回之前的会话
+（5 channel 共享 ~/.claude 主目录）
+
+==========================================

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "graphviz-dot-generator",
+  "owner": "jeremylongshore",
+  "repo": "claude-code-plugins-plus-skills",
+  "path": "planned-skills/generated/18-visual-content/graphviz-dot-generator",
+  "branch": "main",
+  "sha": "c2c5ffefffe681156dd214659d42cab0ed9d4d23",
+  "source": "manual"
+}

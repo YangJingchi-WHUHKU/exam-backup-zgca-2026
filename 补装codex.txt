@@ -1,0 +1,21 @@
+=========================================
+补装 Codex CLI + 5 个 wrapper (含 codexzgc)
+=========================================
+
+★ 在终端 paste 这一行：
+
+bash /media/$USER/DADAGAGA/add_codex.sh
+
+★ 完后跑：
+
+source ~/.bashrc
+codexzgc
+
+=========================================
+5 个 codex 命令
+=========================================
+  codexaipai     codexmicu     codexcodesuc
+  codexswarm     codexzgc  ← 推荐（gpt-5.5）
+
+codexzgc 走 micuapi.ai 用 gpt-5.5 模型
+=========================================

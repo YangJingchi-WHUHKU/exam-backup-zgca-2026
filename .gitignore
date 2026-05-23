@@ -1,0 +1,12 @@
+# Large binary/model files
+ZGCA-USB/exam-toolkit/refs/
+科技成果转换8.6答辩/
+带去联想电脑.zip
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store

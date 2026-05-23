@@ -1,0 +1,53 @@
+{
+  "mcpServers": {
+    "bing-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "bing-cn-mcp"
+      ]
+    },
+    "baidu-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-baidu-search-demo"
+      ]
+    },
+    "serper-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "serper-search-scrape-mcp-server"
+      ],
+      "env": {
+        "SERPER_API_KEY": "0538ec60fad4b78e87ce48e15ab9f93491ebe9de"
+      }
+    },
+    "tavily-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "tavily-mcp"
+      ],
+      "env": {
+        "TAVILY_API_KEY": "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"
+      }
+    },
+    "exa": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "exa-mcp-server"
+      ],
+      "env": {
+        "EXA_API_KEY": "e2b96aa7-37de-4081-85f7-357ca7a3ebb2"
+      }
+    }
+  }
+}

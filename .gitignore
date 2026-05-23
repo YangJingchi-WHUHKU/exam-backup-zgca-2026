@@ -1,5 +1,6 @@
-# Large binary/model files
+# Large binary/model files (refs 都是公开 repo，需要时用 clone-refs.sh 重拉)
 ZGCA-USB/exam-toolkit/refs/
+exam-toolkit/refs/
 科技成果转换8.6答辩/
 带去联想电脑.zip
 
@@ -10,3 +11,4 @@ __pycache__/
 
 # macOS
 .DS_Store
+._*

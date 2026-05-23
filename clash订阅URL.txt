@@ -1,0 +1,21 @@
+========================================
+Clash 配置（明天用FlClash导入）
+========================================
+
+方法A：本地文件导入（推荐，不需要网络）
+  文件1：EdNovasCloud_clash.yaml（2.2MB，当前在用✅）
+  文件2：iKuuu_V2.yaml（483KB，备用）
+
+方法B：订阅URL导入（需要能访问）
+  iKuuu：https://nqlft.no-mad-world.club/link/x1TclfN9Y6yoI65X?clash=3
+
+========================================
+FlClash 导入步骤：
+========================================
+1. 打开FlClash（系统托盘图标）
+2. Profiles → 添加 → 选"本地文件" → 选U盘里的 EdNovasCloud_clash.yaml
+3. 点击该profile激活
+4. 确认 System Proxy 已开启（蓝色toggle）
+5. 验证：curl -I --proxy http://127.0.0.1:7890 https://www.google.com
+
+端口：7890（混合，HTTP+SOCKS5）
